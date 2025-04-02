@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1097842021395",
+    "project_id": "emailassistantapp",
+    "storage_bucket": "emailassistantapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097842021395:android:6bb4ae77eacc72d0df1be6",
+        "android_client_info": {
+          "package_name": "com.example.emailassistantapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkY7JKmpo7lM8KvAihEhqL7voyAy6oRpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
