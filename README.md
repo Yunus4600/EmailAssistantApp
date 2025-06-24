@@ -37,7 +37,7 @@ A modern Android application for efficient email management, powered by AI. Buil
 
 - **New Registration**
 
-  ![New Registration](docs/New_Registration.jpg)
+  ![New Registration](app/docs/New_Registration.jpg)
 
 ---
 
@@ -45,15 +45,15 @@ A modern Android application for efficient email management, powered by AI. Buil
 
 - **Connecting Gmail**
 
-  ![Connecting Gmail](docs/connecting_gmail.jpg)
+  ![Connecting Gmail](app/docs/connecting_gmail.jpg)
 
 - **Welcome Page**
 
-  ![Welcome Page](docs/welcome_page.jpg)
+  ![Welcome Page](app/docs/welcome_page.jpg)
 
 - **Sidebar**
 
-  ![Sidebar](docs/Sidebar.jpg)
+  ![Sidebar](app/docs/Sidebar.jpg)
 
 ---
 
@@ -61,11 +61,11 @@ A modern Android application for efficient email management, powered by AI. Buil
 
 - **AI Summary Example 1**
 
-  ![AI Summary 1](docs/AI_Summary_1.jpg)
+  ![AI Summary 1](app/docs/AI_Summary_1.jpg)
 
 - **AI Summary Example 2**
 
-  ![AI Summary 2](docs/AI_Summary_2.jpg)
+  ![AI Summary 2](app/docs/AI_Summary_2.jpg)
 
 ---
 
