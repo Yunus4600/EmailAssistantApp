@@ -25,19 +25,17 @@ A modern Android application for efficient email management, powered by AI. Buil
 - Real-time feedback and error handling
 - Responsive Material Design 3 interface
 
----
-
 ## Screenshots
 
 ### 1. Login and Registration
 
 - **Login Screen**
 
-  ![Login](app/docs/Login.jpg)
+  <img src="app/docs/Login.jpg" width="400"/>
 
 - **New Registration**
 
-  ![New Registration](app/docs/New_Registration.jpg)
+  <img src="app/docs/New_Registration.jpg" width="400"/>
 
 ---
 
@@ -45,15 +43,15 @@ A modern Android application for efficient email management, powered by AI. Buil
 
 - **Connecting Gmail**
 
-  ![Connecting Gmail](app/docs/connecting_gmail.jpg)
+  <img src="app/docs/connecting_gmail.jpg" width="400"/>
 
 - **Welcome Page**
 
-  ![Welcome Page](app/docs/welcome_page.jpg)
+  <img src="app/docs/welcome_page.jpg" width="400"/>
 
 - **Sidebar**
 
-  ![Sidebar](app/docs/Sidebar.jpg)
+  <img src="app/docs/Sidebar.jpg" width="400"/>
 
 ---
 
@@ -61,23 +59,22 @@ A modern Android application for efficient email management, powered by AI. Buil
 
 - **AI Summary Example 1**
 
-  ![AI Summary 1](app/docs/AI_Summary_1.jpg)
+  <img src="app/docs/AI_Summary_1.jpg" width="400"/>
 
 - **AI Summary Example 2**
 
-  ![AI Summary 2](app/docs/AI_Summary_2.jpg)
+  <img src="app/docs/AI_Summary_2.jpg" width="400"/>
 
 ---
-
 ### 4. AI Suggested Responses
 
 - **Supporting the Agenda**
 
-  ![Response Supporting](app/docs/Response_supporting.jpg)
+  <img src="app/docs/Response_supporting.jpg" width="400"/>
 
 - **Against the Agenda**
 
-  ![Response Against](app/docs/Response_against.jpg)
+  <img src="app/docs/Response_against.jpg" width="400"/>
 
 ---
 
