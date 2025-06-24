@@ -1,7 +1,8 @@
 # Email Assistant App
 
-A modern Android application for efficient email management, powered by AI. Built with Jetpack Compose and Firebase, it offers secure authentication, smart email summarization, and a chat-like interface for productivity.
+**AI-Powered Android Email Client for Productivity and Smart Communication**
 
+Email Assistant App is a modern Android application that transforms your email experience with advanced AI features. Built using Jetpack Compose and Firebase, it offers secure authentication, seamless Gmail integration (with 2FA and app password support), and intelligent email summarization powered by Gemini 2.0 Flash. The app features a chat-style interface for reading, summarizing, and replying to emails, helping you manage your inbox efficiently, save time, and respond with confidence. Designed for professionals, students, and anyone seeking to optimize their daily email workflow, Email Assistant App combines robust security, real-time feedback, and a beautiful Material Design 3 UI for a next-generation mobile email solution.
 ---
 
 ## Table of Contents
@@ -10,9 +11,10 @@ A modern Android application for efficient email management, powered by AI. Buil
 - [Screenshots](#screenshots)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
+- [Usage Instructions](#usage-instructions)
 - [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
+
 
 ---
 
@@ -136,6 +138,33 @@ app/
 
 ---
 
+## Usage Instructions
+
+1. **Login or Register**
+   - Launch the app and log in with your existing account, or register a new account using your email and password.
+
+2. **Connect Your Gmail Account**
+   - After logging in, follow the prompts to connect your Gmail account.
+   - If you have 2FA enabled, generate an app password in your Google Account and use it for authentication.
+
+3. **Fetch Emails**
+   - On the dashboard, tap the "Fetch Daily Report" button to retrieve your latest unread emails.
+
+4. **View AI Summaries**
+   - Each email will be displayed with an AI-generated summary, showing the main points and required actions.
+
+5. **AI Suggested Responses**
+   - For actionable emails (e.g., offers or requests), enter the option number in the textbox for AI-generated reply suggestions.
+   - Tap the copy icon to copy a suggested response to your clipboard.
+
+6. **Refresh Inbox**
+   - Use the refresh option to update your inbox and fetch new emails.
+
+7. **Logout**
+   - Use the sidebar or profile menu to log out of your account at any time securely.
+
+---
+
 ## Contributing
 
 Contributions are welcome!
@@ -153,9 +182,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## Acknowledgments
 
-- Jetpack Compose team
-- Firebase team
-- Material Design team
-- Gemini API team
