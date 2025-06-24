@@ -4,16 +4,18 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.navigation.NavController
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
@@ -23,6 +25,9 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.emailassistantapp.R
 import com.google.firebase.auth.FirebaseAuth
 import android.net.ConnectivityManager
@@ -30,6 +35,9 @@ import android.net.NetworkCapabilities
 import android.net.NetworkInfo
 import android.os.Build
 import com.google.firebase.auth.FirebaseAuthException
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 sealed class Screen {
     object Login : Screen()
@@ -44,71 +52,45 @@ class MainActivity : ComponentActivity() {
             MaterialTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = Color.White
+                    color = MaterialTheme.colorScheme.background
                 ) {
-                    var currentScreen by remember { mutableStateOf<Screen>(Screen.Login) }
-                    var isLoggedIn by remember { mutableStateOf(false) }
-
-                    when (currentScreen) {
-                        Screen.Login -> {
-                            Box(modifier = Modifier.fillMaxSize()) {
-                                // Simple gradient background
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxSize()
-                                        .background(
-                                            brush = Brush.verticalGradient(
-                                                colors = listOf(
-                                                    Color(0xFFE8F4F8),
-                                                    Color(0xFFF5F9FC),
-                                                    Color(0xFFF8FBFE)
-                                                )
-                                            )
-                                        )
-                                )
-                                
-                                LoginScreen(
-                                    onLoginSuccess = {
-                                        isLoggedIn = true
-                                        currentScreen = Screen.Welcome
-                                    },
-                                    onRegisterClick = {
-                                        currentScreen = Screen.Register
+                    val navController = rememberNavController()
+                    
+                    NavHost(navController = navController, startDestination = "login") {
+                        composable("login") {
+                            LoginScreen(
+                                onLoginSuccess = {
+                                    navController.navigate("welcome") {
+                                        popUpTo("login") { inclusive = true }
                                     }
-                                )
-                            }
-                        }
-                        Screen.Register -> {
-                            Box(modifier = Modifier.fillMaxSize()) {
-                                // Simple gradient background
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxSize()
-                                        .background(
-                                            brush = Brush.verticalGradient(
-                                                colors = listOf(
-                                                    Color(0xFFE8F4F8),
-                                                    Color(0xFFF5F9FC),
-                                                    Color(0xFFF8FBFE)
-                                                )
-                                            )
-                                        )
-                                )
-                                
-                                RegisterPage(
-                                    onNavigateToLogin = {
-                                        currentScreen = Screen.Login
-                                    }
-                                )
-                            }
-                        }
-                        Screen.Welcome -> {
-                            WelcomePage(
-                                onLogout = {
-                                    isLoggedIn = false
-                                    currentScreen = Screen.Login
+                                },
+                                onRegisterClick = {
+                                    navController.navigate("register")
                                 }
                             )
+                        }
+                        
+                        composable("register") {
+                            RegisterPage(navController = navController)
+                        }
+                        
+                        composable("welcome") {
+                            val auth = FirebaseAuth.getInstance()
+                            WelcomePage(
+                                navController = navController,
+                                userEmail = auth.currentUser?.email,
+                                onLogout = {
+                                    auth.signOut()
+                                    navController.navigate("login") {
+                                        popUpTo("welcome") { inclusive = true }
+                                    }
+                                }
+                            )
+                        }
+                        
+                        composable("email_list") {
+                            // TODO: Add EmailListScreen
+                            Text("Email List")
                         }
                     }
                 }
@@ -378,5 +360,19 @@ fun LoginScreen(
                 }
             }
         )
+    }
+}
+
+@Composable
+fun FetchDailyReportsButton(onClick: () -> Unit) {
+    Button(
+        onClick = {
+            CoroutineScope(Dispatchers.IO).launch {
+                onClick() // Ensure this runs on a background thread
+            }
+        },
+        modifier = Modifier.padding(16.dp)
+    ) {
+        Text("Fetch Daily Reports")
     }
 }

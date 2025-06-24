@@ -1,65 +1,87 @@
 # Email Assistant App
 
-A modern Android application built with Jetpack Compose that provides AI-powered email assistance and management.
+A modern Android application for efficient email management, powered by AI. Built with Jetpack Compose and Firebase, it offers secure authentication, smart email summarization, and a chat-like interface for productivity.
 
-## 🚀 Features
+---
 
-- **Modern UI**: Built with Material Design 3 and Jetpack Compose
-- **Authentication**: Secure login and registration with Firebase
-- **AI Integration**: Smart email assistance and suggestions
-- **Daily Reports**: Automated email summary generation
-- **Real-time Chat**: Interactive chat interface for email management
-- **Responsive Design**: Adapts to different screen sizes and orientations
+## Table of Contents
 
-## 🛠️ Tech Stack
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-- **Language**: Kotlin
-- **UI Framework**: Jetpack Compose
-- **Architecture**: MVVM (Model-View-ViewModel)
-- **Backend**: Firebase
-  - Authentication
-  - Firestore Database
-  - Cloud Storage
-- **Dependencies**:
-  - Material Design 3
-  - Coroutines
-  - ViewModel
-  - Navigation Component
+---
 
-## 📋 Prerequisites
+## Features
 
-- Android Studio Arctic Fox (2020.3.1) or newer
-- Android SDK 23 or higher
-- Kotlin 1.8.0 or higher
-- Gradle 7.0 or higher
+- Secure user authentication (Firebase)
+- AI-powered email summarization and response suggestions (Gemini 2.0 Flash)
+- Gmail connectivity with 2FA and app password support
+- Chat-style UI for summaries and replies
+- Real-time feedback and error handling
+- Responsive Material Design 3 interface
 
-## 🔧 Setup Instructions
+---
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/EmailAssistantApp.git
-   ```
+## Screenshots
 
-2. **Open in Android Studio**
-   - Open Android Studio
-   - Select "Open an existing project"
-   - Navigate to the cloned repository and select it
+### 1. Login and Registration
 
-3. **Configure Firebase**
-   - Create a new Firebase project at [Firebase Console](https://console.firebase.google.com/)
-   - Add Android app to your Firebase project
-   - Download `google-services.json` and place it in `app/` directory
+- **Login Screen**
 
-4. **Build and Run**
-   - Sync project with Gradle files
-   - Build the project
-   - Run on an emulator or physical device
+  ![Login](docs/Login.jpg)
 
-## 📱 Screenshots
+- **New Registration**
 
-[Add screenshots of your app here]
+  ![New Registration](docs/New_Registration.jpg)
 
-## 🏗️ Project Structure
+---
+
+### 2. Dashboard
+
+- **Connecting Gmail**
+
+  ![Connecting Gmail](docs/connecting_gmail.jpg)
+
+- **Welcome Page**
+
+  ![Welcome Page](docs/welcome_page.jpg)
+
+- **Sidebar**
+
+  ![Sidebar](docs/Sidebar.jpg)
+
+---
+
+### 3. AI Summaries of Emails
+
+- **AI Summary Example 1**
+
+  ![AI Summary 1](docs/AI_Summary_1.jpg)
+
+- **AI Summary Example 2**
+
+  ![AI Summary 2](docs/AI_Summary_2.jpg)
+
+---
+
+### 4. AI Suggested Responses
+
+- **Supporting the Agenda**
+
+  ![Response Supporting](docs/Response_supporting.jpg)
+
+- **Against the Agenda**
+
+  ![Response Against](docs/Response_against.jpg)
+
+---
+
+## Project Structure
 
 ```
 app/
@@ -69,35 +91,74 @@ app/
 │       │   └── com/
 │       │       └── example/
 │       │           └── emailassistantapp/
+│       │               ├── components/
+│       │               ├── network/
 │       │               ├── userinterface/
-│       │               │   ├── MainActivity.kt
-│       │               │   ├── WelcomePage.kt
-│       │               │   └── RegisterPage.kt
-│       │               └── utils/
+│       │               ├── viewmodel/
+│       │               └── data/
 │       └── res/
 │           ├── drawable/
 │           ├── values/
-│           └── mipmap/
+│           ├── mipmap/
+│           └── xml/
+├── docs/
+│   ├── Mobile Project Documentation.docx
+│   └── Mobile Project Documentation.txt
+├── build.gradle.kts
+├── proguard-rules.pro
+├── google-services.json
 ```
 
-## 🤝 Contributing
+---
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## Getting Started
 
-## 📝 License
+### Prerequisites
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Android Studio Arctic Fox (2020.3.1) or newer
+- Android SDK 23 or higher
+- Kotlin 1.8.0 or higher
+- Gradle 7.0 or higher
 
-## 👥 Authors
+### Setup Instructions
 
-- Your Name - [GitHub Profile](https://github.com/yourusername)
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yourusername/EmailAssistantApp.git
+   ```
+2. **Open in Android Studio:**
+   - Open Android Studio and select "Open an existing project"
+   - Navigate to the cloned repository
+3. **Configure Firebase:**
+   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+   - Add an Android app, download `google-services.json`, and place it in the `app/` directory
+4. **Add Gemini API Key:**
+   - Add your Gemini 2.0 Flash API key to `local.properties` as `GEMINI_API_KEY=your_api_key_here`
+5. **Build and Run:**
+   - Sync Gradle, build the project, and run on an emulator or device
 
-## 🙏 Acknowledgments
+---
+
+## Contributing
+
+Contributions are welcome!
+
+- Fork this repository
+- Create a new branch for your feature or bugfix
+- Commit your changes with clear messages
+- Open a pull request
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgments
 
 - Jetpack Compose team
 - Firebase team
-- Material Design team 
+- Material Design team
+- Gemini API team
