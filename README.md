@@ -73,11 +73,11 @@ A modern Android application for efficient email management, powered by AI. Buil
 
 - **Supporting the Agenda**
 
-  ![Response Supporting](docs/Response_supporting.jpg)
+  ![Response Supporting](app/docs/Response_supporting.jpg)
 
 - **Against the Agenda**
 
-  ![Response Against](docs/Response_against.jpg)
+  ![Response Against](app/docs/Response_against.jpg)
 
 ---
 
