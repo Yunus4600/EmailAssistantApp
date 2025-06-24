@@ -102,8 +102,8 @@ app/
 │           ├── mipmap/
 │           └── xml/
 ├── docs/
-│   ├── Mobile Project Documentation.docx
-│   └── Mobile Project Documentation.txt
+│   ├── documentation and screenshots
+│   
 ├── build.gradle.kts
 ├── proguard-rules.pro
 ├── google-services.json
