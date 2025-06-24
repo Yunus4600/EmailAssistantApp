@@ -3,6 +3,7 @@
 **AI-Powered Android Email Client for Productivity and Smart Communication**
 
 Email Assistant App is a modern Android application that transforms your email experience with advanced AI features. Built using Jetpack Compose and Firebase, it offers secure authentication, seamless Gmail integration (with 2FA and app password support), and intelligent email summarization powered by Gemini 2.0 Flash. The app features a chat-style interface for reading, summarizing, and replying to emails, helping you manage your inbox efficiently, save time, and respond with confidence. Designed for professionals, students, and anyone seeking to optimize their daily email workflow, Email Assistant App combines robust security, real-time feedback, and a beautiful Material Design 3 UI for a next-generation mobile email solution.
+
 ---
 
 ## Table of Contents
