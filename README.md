@@ -33,7 +33,7 @@ A modern Android application for efficient email management, powered by AI. Buil
 
 - **Login Screen**
 
-  ![Login](docs/Login.jpg)
+  ![Login](app/docs/Login.jpg)
 
 - **New Registration**
 
